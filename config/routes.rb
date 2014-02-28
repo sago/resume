@@ -1,4 +1,11 @@
 Resume::Application.routes.draw do
+  resources :menus
+  get 'menus/studies' => 'menus#studies', :as => 'studies'
+  get 'menus/skills' => 'menus#skills', :as => 'skills'
+  get 'menus/portfolio' => 'menus#portfolio', :as => 'portfolio'
+  get 'menus/blog' => 'menus#blog', :as => 'blog'
+  get 'menus/contact' => 'menus#contact', :as => 'contact'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +55,7 @@ Resume::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'menus#index'
 
   # See how all your routes lay out with "rake routes"
 
