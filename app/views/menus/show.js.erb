@@ -1,15 +1,1 @@
-<% if params[:id] == 'studies'%>
-    $("#studies").html("<%= escape_javascript(render :partial => 'shared/studies')%>")
-<% end %>
-<% if params[:id] == 'skills' %>
-    $("#skills").html("<%= escape_javascript(render :partial => 'shared/skills')%>")
-<% end %>
-<% if params[:id] == 'portfolio' %>
-    $("#portfolio").html("<%= escape_javascript(render :partial => 'shared/portfolio')%>")
-<% end %>
-<% if params[:id] == 'blog' %>
-    $("#blog").html("<%= escape_javascript(render :partial => 'shared/blog')%>")
-<% end %>
-<% if params[:id] == 'contact' %>
-    $("#contact").html("<%= escape_javascript(render :partial => 'shared/contact')%>")
-<% end %>
+$("#info").html('<%= escape_javascript(render "shared/#{params[:id]}")%>');

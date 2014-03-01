@@ -15,47 +15,42 @@
   </span>
 </div>
 <div class="container">
-  <ul class="nav nav-pills">
+  <ul class="nav nav-tabs">
     <li>
       <%= link_to "Home", menus_path, :class => 'btn btn-info' %>
 
     </li>
     <li>
       <%= link_to 'Studies', studies_path,
-                  :id => 'studies',
                   :remote => true,
                   :class => 'btn btn-info' %>
     </li>
     <li>
       <%= link_to "Skills", skills_path,
-                  :id => 'skills',
                   :remote => true,
                   :class => 'btn btn-info'%>
     </li>
     <li>
       <%= link_to "Porfolio", portfolio_path,
-                  :id => 'portfolio',
                   :remote => true,
                   :class => 'btn btn-info'%>
     </li>
     <li>
       <%= link_to "Blog", blog_path,
-                  :id => 'blog',
                   :remote => true,
                   :class => 'btn btn-info'%>
     </li>
     <li>
       <%= link_to "Contact", contact_path,
-                  :id => 'contact',
                   :remote => true,
                   :class => 'btn btn-info'%>
     </li>
 
   </ul>
   <div class="row">
-    <div class="span9">
-      <%= yield %>
+    <div class="span9" id='info'>
     </div>
+    <%= yield %>
     <div class="span3">
       <h4>Menú lateral</h4>
     </div>
@@ -63,4 +58,5 @@
 
 </div>
 </body>
+<p></p>
 </html>
