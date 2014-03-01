@@ -14,36 +14,31 @@
     <img src="/assets/banner.png">
   </span>
 </div>
-<div class="container">
-  <ul class="nav nav-tabs">
+<div class="container ">
+  <ul class="nav nav-tabs breadcrumb">
     <li>
-      <%= link_to "Home", menus_path, :class => 'btn btn-info' %>
+      <%= link_to "Home", menus_path%>
 
     </li>
     <li>
       <%= link_to 'Studies', studies_path,
-                  :remote => true,
-                  :class => 'btn btn-info' %>
+                  :remote => true %>
     </li>
     <li>
       <%= link_to "Skills", skills_path,
-                  :remote => true,
-                  :class => 'btn btn-info'%>
+                  :remote => true %>
     </li>
     <li>
       <%= link_to "Porfolio", portfolio_path,
-                  :remote => true,
-                  :class => 'btn btn-info'%>
+                  :remote => true %>
     </li>
     <li>
       <%= link_to "Blog", blog_path,
-                  :remote => true,
-                  :class => 'btn btn-info'%>
+                  :remote => true %>
     </li>
     <li>
       <%= link_to "Contact", contact_path,
-                  :remote => true,
-                  :class => 'btn btn-info'%>
+                  :remote => true %>
     </li>
 
   </ul>
