@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui-1.10.4.custom.js
 //= require twitter/bootstrap
 //= require_tree .
+$(document).ready(function () {
+    $('#myTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    })
+});

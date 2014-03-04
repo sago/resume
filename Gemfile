@@ -20,6 +20,8 @@ group :assets do
   gem "less-rails"
   gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-rails'
+  gem 'jquery-ui-rails'
 end
 
 gem 'jquery-rails'

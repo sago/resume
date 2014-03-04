@@ -7,51 +7,46 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="background">
 <div class="container">
   <span>
 
     <img src="/assets/banner.png">
   </span>
 </div>
-<div class="container ">
-  <ul class="nav nav-tabs breadcrumb">
-    <li>
-      <%= link_to "Home", menus_path%>
-
-    </li>
-    <li>
-      <%= link_to 'Studies', studies_path,
-                  :remote => true %>
-    </li>
-    <li>
-      <%= link_to "Skills", skills_path,
-                  :remote => true %>
-    </li>
-    <li>
-      <%= link_to "Porfolio", portfolio_path,
-                  :remote => true %>
-    </li>
-    <li>
-      <%= link_to "Blog", blog_path,
-                  :remote => true %>
-    </li>
-    <li>
-      <%= link_to "Contact", contact_path,
-                  :remote => true %>
-    </li>
-
-  </ul>
-  <div class="row">
-    <div class="span9" id='info'>
-    </div>
-    <%= yield %>
-    <div class="span3">
-      <h4>Menú lateral</h4>
+<div class="container">
+  <div>
+    <ul class="nav nav-tabs mytab" id="myTab">
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#studies">Studies</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="tab-content span9" id="tab-content">
+      <div class="tab-pane active" id="home">
+        <%= html_escape(render "shared/index") %>
+      </div>
+      <div class="tab-pane" id="studies">
+        <%= html_escape(render "shared/studies") %>
+      </div>
+      <div class="tab-pane" id="skills">
+        <%= html_escape(render "shared/skills") %>
+      </div>
+      <div class="tab-pane" id="portfolio">
+        <%= html_escape(render "shared/portfolio") %>
+      </div>
+      <div class="tab-pane" id="blog">
+        <%= html_escape(render "shared/blog") %>
+      </div>
+      <div class="tab-pane" id="contact">
+        <%= html_escape(render "shared/contact") %>
+      </div>
     </div>
   </div>
-
 </div>
+
 </body>
-<p></p>
+
 </html>
