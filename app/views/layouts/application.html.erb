@@ -14,7 +14,7 @@
     <img src="/assets/banner.png">
   </span>
 </div>
-<div class="container">
+<div class="container cont-div">
   <div>
     <ul class="nav nav-tabs mytab" id="myTab">
       <li class="active"><a href="#home">Home</a></li>
@@ -24,7 +24,7 @@
       <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="tab-content span9" id="tab-content">
+    <div class="tab-content span8" id="tab-content">
       <div class="tab-pane active" id="home">
         <%= html_escape(render "shared/index") %>
       </div>
@@ -45,7 +45,28 @@
       </div>
     </div>
   </div>
+  <div class="span3 tab-content">
+    <h2>Media</h2>
+
+    <p>
+      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/saulgo18" data-widget-id="365501710162067458">Tweets
+        by @saulgo18</a>
+      <script>!function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+          if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = p + "://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+          }
+      }(document, "script", "twitter-wjs");</script>
+    </p>
+    <p>
+      <a href="https://www.facebook.com/Saul18" target="_TOP" title="Sa&#xfa;l G&#xf3;mez"><img src="https://badge.facebook.com/badge/1844615556.3214.1523246714.png" style="border: 0px;"/></a><br/>
+    </p>
+  </div>
 </div>
+
 
 </body>
 

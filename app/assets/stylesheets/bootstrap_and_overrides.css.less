@@ -33,14 +33,20 @@
 .background{
   background-color: #000000;
 }
+.cont-div{
+  margin: 0px 24px;
+}
 .nav-tabs {
+   .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    color: #CE9B41;
+  }
   border-bottom: 0px;
 }
 .mytab{
   background-color: steelblue;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  margin: 1px 201px 0px;
+  margin: 1px 156px 0px;
   height: 37px;
   width: 528px;
   font-size: initial;
@@ -48,6 +54,18 @@
     width: 90px;
     text-align: center;
     margin-right: -2px;
+    a{
+      color: #9CD5F0;
+    }
+    a:focus {
+      background-color: #ffffff;
+      border-bottom-color: transparent;
+      cursor: default;
+      color: #B68C60;
+    }
+    a:visited {
+
+    }
   }
 }
 .tab-content{
@@ -63,5 +81,8 @@
   p{
     color: white;
     padding: 5px 30px;
+  }
+  ul{
+    margin: 10px;
   }
 }
