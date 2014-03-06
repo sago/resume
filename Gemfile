@@ -27,6 +27,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
+  gem 'devise'
   gem 'pry-rails'
   gem 'better_errors'
   gem 'awesome_print'
