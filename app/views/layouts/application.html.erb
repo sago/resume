@@ -14,14 +14,14 @@
     <img src="/assets/banner.png">
   </span>
 </div>
-<div class="container cont-div">
+<div class="container-fluid cont-div">
   <div>
-    <ul class="nav nav-tabs mytab" id="myTab">
+    <ul class="nav nav-tabs mytab span8" id="myTab">
       <li class="active"><a href="#home">Home</a></li>
       <li><a href="#studies">Studies</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#blog">Blog</a></li>
+      <li><a class="external" href="#blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="tab-content span8" id="tab-content">
@@ -71,3 +71,22 @@
 </body>
 
 </html>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Blogger</h4>
+      </div>
+      <div class="modal-body">
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
