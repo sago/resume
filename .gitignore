@@ -16,6 +16,3 @@
 
 # Ignore all test files.
 /test
-
-# Ignore all .idea
-/.idea

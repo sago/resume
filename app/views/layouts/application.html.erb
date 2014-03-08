@@ -38,33 +38,16 @@
         <%= html_escape(render "shared/portfolio") %>
       </div>
       <div class="tab-pane" id="blog">
-        <!-- Modal -->
+        <%= html_escape(render "shared/blog") %>
       </div>
       <div class="tab-pane" id="contact">
         <%= html_escape(render "shared/contact") %>
       </div>
     </div>
   </div>
-  
-  <!--Menú lateral -->
   <div class="span3 tab-content">
-    <h2>Social</h2>
-    <p>
-      <!-- Google Maps -->
-      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-      <meta charset="utf-8">
-      <style>
-          html, #map-canvas {
-              height: 100%;
-              margin: 0px;
-              padding: 0px
-          }
-      </style>
-      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <div id="map-canvas" style="height: 238px;"></div>
-    </p>
+    <h2>Media</h2>
 
-    <!-- Twitter -->
     <p>
       <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/saulgo18" data-widget-id="365501710162067458">Tweets
         by @saulgo18</a>
@@ -89,6 +72,7 @@
 
 </html>
 
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -98,7 +82,7 @@
         <h4 class="modal-title" id="myModalLabel">Blogger</h4>
       </div>
       <div class="modal-body">
-
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
