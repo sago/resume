@@ -45,9 +45,26 @@
       </div>
     </div>
   </div>
-  <div class="span3 tab-content">
-    <h2>Media</h2>
 
+  <!-- Menú lateral-->
+  <div class="span3 tab-content">
+        <h2>Social</h2>
+    <p>
+      <!-- Google Maps -->
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+      <meta charset="utf-8">
+      <style>
+          html, #map-canvas {
+              height: 100%;
+              margin: 0px;
+              padding: 0px
+          }
+      </style>
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <div id="map-canvas" style="height: 238px;"></div>
+    </p>
+
+    <!-- Twitter -->
     <p>
       <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/saulgo18" data-widget-id="365501710162067458">Tweets
         by @saulgo18</a>
@@ -61,6 +78,7 @@
           }
       }(document, "script", "twitter-wjs");</script>
     </p>
+    <!-- Facebook -->
     <p>
       <a href="https://www.facebook.com/Saul18" target="_TOP" title="Sa&#xfa;l G&#xf3;mez"><img src="https://badge.facebook.com/badge/1844615556.3214.1523246714.png" style="border: 0px;"/></a><br/>
     </p>
@@ -82,7 +100,7 @@
         <h4 class="modal-title" id="myModalLabel">Blogger</h4>
       </div>
       <div class="modal-body">
-      
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
