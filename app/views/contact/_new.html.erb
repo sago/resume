@@ -1,4 +1,5 @@
-<%= form_for @message, :url => contact_path, :html => {:method => :get} do |form| %>
+<div class="message-form">
+  <%= form_for @message, :url => contact_path, :html => {:method => :get} do |form| %>
   <fieldset class="fields">
     <div class="field">
       <%= form.label :name %>
@@ -14,13 +15,14 @@
       <%= form.text_field :subject %>
     </div>
 
-    <div class="field">
+    <div class="field textarea">
       <%= form.label :body %>
       <%= form.text_area :body %>
     </div>
   </fieldset>
 
   <fieldset class="actions">
-    <%= form.submit "Send" %>
+    <%= form.submit "Send", :class => 'btn btn-warning' %>
   </fieldset>
-<% end %>
+  <% end %>
+</div>
