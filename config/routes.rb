@@ -4,7 +4,11 @@ Resume::Application.routes.draw do
   get 'menus/skills' => 'menus#skills', :as => 'skills'
   get 'menus/portfolio' => 'menus#portfolio', :as => 'portfolio'
   get 'menus/blog' => 'menus#blog', :as => 'blog'
-  get 'menus/contact' => 'menus#contact', :as => 'contact'
+  #get 'menus/contact' => 'menus#contact', :as => 'contact'
+
+  # Routes for mailer
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
