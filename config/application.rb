@@ -60,18 +60,19 @@ module Resume
     config.assets.version = '1.0'
 
     # Mailer configuration
+
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "gmail.com",
       :user_name            => "saulgomezperez@gmail.com",
-      :password             => "maverick1982",
+      :password             => "12345678resume",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
 
     config.action_mailer.default_url_options = {
-      :host => "herokuapp.resume.com"
+      :host => "gmail.com"
     }
   end
 end

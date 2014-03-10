@@ -10,8 +10,7 @@ class ContactController < ApplicationController
       redirect_to(root_path, :notice => "Message was successfully sent.")
     else
       flash.now.alert = "Please fill all fields."
-      binding.pry
-      render_partial "contact/new"
+      render :new
     end
   end
 end

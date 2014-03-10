@@ -1,5 +1,4 @@
 <div class="message-form">
-  <%= flash[:alert] %></br>
   <%= form_for @message, :url => contact_path do |form| %>
   <fieldset class="fields">
     <div class="field">
@@ -23,7 +22,7 @@
   </fieldset>
 
   <fieldset class="actions">
-    <%= form.submit "Send", :class => 'btn btn-warning' %>
+    <%= form.submit "Send", :class => 'btn-warning' %>
   </fieldset>
   <% end %>
 </div>

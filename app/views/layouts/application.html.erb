@@ -17,30 +17,30 @@
 <div class="container-fluid cont-div">
   <div>
     <ul class="nav nav-tabs mytab span8" id="myTab">
-      <li class="active"><a href="#home">Home</a></li>
-      <li><a href="#studies">Studies</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a class="external" href="#blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="<%= 'active' if params[:tab] == 'home' %>"><a href="#home">Home</a></li>
+      <li class="<%= 'active' if params[:tab] == 'studies' %>"><a href="#studies">Studies</a></li>
+      <li class="<%= 'active' if params[:tab] == 'skills' %>"><a href="#skills">Skills</a></li>
+      <li class="<%= 'active' if params[:tab] == 'portfolio' %>"><a href="#portfolio">Portfolio</a></li>
+      <li class="<%= 'active' if params[:tab] == 'blog' %>"><a class="external" href="#blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
+      <li class="<%= 'active' if params[:tab] == 'contact' %>"><a href="#contact">Contact</a></li>
     </ul>
     <div class="tab-content span8" id="tab-content">
-      <div class="tab-pane active" id="home">
+      <div class="<%= if params[:tab] == 'home' then 'tab-pane active'  else 'tab-pane' end%>" id="home">
         <%= html_escape(render "shared/index") %>
       </div>
-      <div class="tab-pane" id="studies">
+      <div class="<%= if params[:tab] == 'studies' then 'tab-pane active'  else 'tab-pane' end%>" id="studies">
         <%= html_escape(render "shared/studies") %>
       </div>
-      <div class="tab-pane" id="skills">
+      <div class="<%= if params[:tab] == 'skills' then 'tab-pane active'  else 'tab-pane' end%>" id="skills">
         <%= html_escape(render "shared/skills") %>
       </div>
-      <div class="tab-pane" id="portfolio">
+      <div class="<%= if params[:tab] == 'portfolio' then 'tab-pane active'  else 'tab-pane' end%>" id="portfolio">
         <%= html_escape(render "shared/portfolio") %>
       </div>
-      <div class="tab-pane" id="blog">
+      <div class="<%= if params[:tab] == 'blog' then 'tab-pane active'  else 'tab-pane' end%>" id="blog">
         <%= html_escape(render "shared/blog") %>
       </div>
-      <div class="tab-pane" id="contact">
+      <div class="<%= if (params[:tab] == 'contact' || !params[:tab]) then 'tab-pane active'  else 'tab-pane' end%>" id="contact">
         <%= html_escape(render "contact/new") %>
       </div>
     </div>
