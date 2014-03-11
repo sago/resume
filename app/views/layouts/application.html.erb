@@ -14,6 +14,7 @@
     <img src="/assets/banner.png">
   </span>
 </div>
+<% params[:tab]= 'home' %>
 <div class="container-fluid cont-div">
   <div>
     <ul class="nav nav-tabs mytab span8" id="myTab">
@@ -25,6 +26,12 @@
       <li class="<%= 'active' if params[:tab] == 'contact' %>"><a href="#contact">Contact</a></li>
     </ul>
     <div class="tab-content span8" id="tab-content">
+      <div class="notice alert alert-success .alert-dismissable" style="padding: 0px 90px 0px 50px">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <b>
+          <%= flash[:notice] %>
+        </b>
+      </div>
       <div class="<%= if params[:tab] == 'home' then 'tab-pane active'  else 'tab-pane' end%>" id="home">
         <%= html_escape(render "shared/index") %>
       </div>
@@ -40,7 +47,7 @@
       <div class="<%= if params[:tab] == 'blog' then 'tab-pane active'  else 'tab-pane' end%>" id="blog">
         <%= html_escape(render "shared/blog") %>
       </div>
-      <div class="<%= if (params[:tab] == 'contact' || !params[:tab]) then 'tab-pane active'  else 'tab-pane' end%>" id="contact">
+      <div class="<%= if params[:tab] == 'contact' then 'tab-pane active'  else 'tab-pane' end%>" id="contact">
         <%= html_escape(render "contact/new") %>
       </div>
     </div>

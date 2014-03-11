@@ -1,5 +1,13 @@
 <div class="message-form">
-  <%= flash[:alert] %></br>
+  <div class="notice">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <b>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </b>
+    </br>
+    </br>
+  </div>
   <%= form_for @message, :url => contact_path do |form| %>
   <fieldset class="fields">
     <div class="field">
