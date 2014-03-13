@@ -10,20 +10,18 @@
 <body class="background">
 <div class="container">
   <span>
-
     <img src="/assets/banner.png">
   </span>
 </div>
-<% params[:tab]= 'home' %>
 <div class="container-fluid cont-div">
   <div>
     <ul class="nav nav-tabs mytab span8" id="myTab">
-      <li class="<%= 'active' if params[:tab] == 'home' %>"><a href="#home">Home</a></li>
-      <li class="<%= 'active' if params[:tab] == 'studies' %>"><a href="#studies">Studies</a></li>
-      <li class="<%= 'active' if params[:tab] == 'skills' %>"><a href="#skills">Skills</a></li>
-      <li class="<%= 'active' if params[:tab] == 'portfolio' %>"><a href="#portfolio">Portfolio</a></li>
-      <li class="<%= 'active' if params[:tab] == 'blog' %>"><a class="external" href="#blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
-      <li class="<%= 'active' if params[:tab] == 'contact' %>"><a href="#contact">Contact</a></li>
+      <li  id="home-tab"><a href="#home">Home</a></li>
+      <li><a href="#studies">Studies</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a class="external" href="#blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
+      <li  id="contact-tab"><a href="#contact">Contact</a></li>
     </ul>
     <div class="tab-content span8" id="tab-content">
       <div class="notice alert alert-success .alert-dismissable" style="padding: 0px 90px 0px 50px">
@@ -32,22 +30,22 @@
           <%= flash[:notice] %>
         </b>
       </div>
-      <div class="<%= if params[:tab] == 'home' then 'tab-pane active'  else 'tab-pane' end%>" id="home">
+      <div class="tab-pane" id="home">
         <%= html_escape(render "shared/index") %>
       </div>
-      <div class="<%= if params[:tab] == 'studies' then 'tab-pane active'  else 'tab-pane' end%>" id="studies">
+      <div class="tab-pane" id="studies">
         <%= html_escape(render "shared/studies") %>
       </div>
-      <div class="<%= if params[:tab] == 'skills' then 'tab-pane active'  else 'tab-pane' end%>" id="skills">
+      <div class="tab-pane" id="skills">
         <%= html_escape(render "shared/skills") %>
       </div>
-      <div class="<%= if params[:tab] == 'portfolio' then 'tab-pane active'  else 'tab-pane' end%>" id="portfolio">
+      <div class="tab-pane" id="portfolio">
         <%= html_escape(render "shared/portfolio") %>
       </div>
-      <div class="<%= if params[:tab] == 'blog' then 'tab-pane active'  else 'tab-pane' end%>" id="blog">
+      <div class="tab-pane" id="blog">
         <%= html_escape(render "shared/blog") %>
       </div>
-      <div class="<%= if params[:tab] == 'contact' then 'tab-pane active'  else 'tab-pane' end%>" id="contact">
+      <div class="tab-pane <%= 'active' if controller_name == 'contact' %>" id="contact">
         <%= html_escape(render "contact/new") %>
       </div>
     </div>
