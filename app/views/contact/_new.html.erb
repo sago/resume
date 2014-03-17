@@ -32,6 +32,7 @@
 
   <fieldset class="actions">
     <%= form.submit "Send", :class => 'btn btn-warning' %>
+    <input  class="btn btn-danger" type="reset" value="Reset Form" onClick= $(".field_with_errors").removeClass("field_with_errors") />
   </fieldset>
   <% end %>
 </div>
