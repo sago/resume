@@ -30,7 +30,7 @@
           <%= flash[:notice] %>
         </b>
       </div>
-      <div class="tab-pane" id="home">
+      <div class="tab-pane <%= 'active' if controller_name == 'menus' %>" id="home">
         <%= html_escape(render "shared/index") %>
       </div>
       <div class="tab-pane" id="studies">
@@ -66,7 +66,7 @@
           }
       </style>
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <div id="map-canvas" style="height: 238px;"></div>
+    <div id="map-canvas" style="height: 238px; margin: 15px;"></div>
     </p>
 
     <!-- Twitter -->
