@@ -8,88 +8,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="background">
-<div class="container">
-  <span>
-    <img src="/assets/banner.png">
-  </span>
-</div>
-<div class="container-fluid cont-div">
-  <div>
-    <ul class="nav nav-tabs mytab span8" id="myTab">
-      <li  id="home-tab"><a href="#home">Home</a></li>
-      <li><a href="#studies">Studies</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a class="external" href="#blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
-      <li  id="contact-tab"><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="tab-content span8" id="tab-content">
-      <div class="notice alert alert-success .alert-dismissable" style="padding: 0px 90px 0px 50px">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      </div>
-      <div class="tab-pane <%= 'active' if controller_name == 'menus' %>" id="home">
-        <%= html_escape(render "shared/index") %>
-      </div>
-      <div class="tab-pane" id="studies">
-        <%= html_escape(render "shared/studies") %>
-      </div>
-      <div class="tab-pane" id="skills">
-        <%= html_escape(render "shared/skills") %>
-      </div>
-      <div class="tab-pane" id="portfolio">
-        <%= html_escape(render "shared/portfolio") %>
-      </div>
-      <div class="tab-pane" id="blog">
-        <%= html_escape(render "shared/blog") %>
-      </div>
-      <div class="tab-pane <%= 'active' if controller_name == 'contact' %>" id="contact">
-        <%= html_escape(render "contact/new") %>
+  <div class="container">
+    <span>
+      <img src="/assets/banner.png">
+    </span>
+  </div>
+  <div class="container-fluid cont-div">
+    <div>
+      <ul class="nav nav-tabs mytab span8" id="myTab">
+        <li  id="home-tab"><a href="#home">Home</a></li>
+        <li><a href="#studies">Studies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a class="external" href="#blog" data-toggle="modal" data-target="#myModal">Blog</a></li>
+        <li  id="contact-tab"><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="tab-content span8" id="tab-content">
+        <div class="notice alert alert-success .alert-dismissable" style="padding: 0px 90px 0px 50px">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+        <div class="tab-pane <%= 'active' if controller_name == 'menus' %>" id="home">
+          <%= html_escape(render "shared/index") %>
+        </div>
+        <div class="tab-pane" id="studies">
+          <%= html_escape(render "shared/studies") %>
+        </div>
+        <div class="tab-pane" id="skills">
+          <%= html_escape(render "shared/skills") %>
+        </div>
+        <div class="tab-pane" id="portfolio">
+          <%= html_escape(render "shared/portfolio") %>
+        </div>
+        <div class="tab-pane" id="blog">
+          <%= html_escape(render "shared/blog") %>
+        </div>
+        <div class="tab-pane <%= 'active' if controller_name == 'contact' %>" id="contact">
+          <%= html_escape(render "contact/new") %>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Menú lateral-->
-  <div class="span3 tab-content">
+    <!-- Menú lateral-->
+    <div class="span3 tab-content">
         <h2>Social</h2>
-      <!-- Google Maps -->
-      <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-      <meta charset="utf-8">
-      <style>
+        <!-- Google Maps -->
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <style>
           html, #map-canvas {
               height: 100%;
               margin: 0px;
               padding: 0px
-          }
-      </style>
-      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <div id="map-canvas" style="height: 238px; margin: 15px;"></div>
+            }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <div id="map-canvas" style="height: 238px; margin: 15px;"></div>
 
-    <!-- Twitter -->
-    <p>
-      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/saulgo18" data-widget-id="365501710162067458">Tweets
-        by @saulgo18</a>
-      <script>!function (d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-          if (!d.getElementById(id)) {
+        <!-- Twitter -->
+        <p>
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/saulgo18" data-widget-id="365501710162067458">Tweets
+            by @saulgo18</a>
+          <script>!function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
               js = d.createElement(s);
               js.id = id;
               js.src = p + "://platform.twitter.com/widgets.js";
               fjs.parentNode.insertBefore(js, fjs);
-          }
-      }(document, "script", "twitter-wjs");</script>
-    </p>
-    <!-- Facebook -->
-    <p>
-      <a href="https://www.facebook.com/Saul18" target="_TOP" title="Sa&#xfa;l G&#xf3;mez"><img src="https://badge.facebook.com/badge/1844615556.3214.1523246714.png" style="border: 0px;"/></a><br/>
-    </p>
-  </div>
-</div>
-
-
+            }
+          }(document, "script", "twitter-wjs");</script>
+        </p>
+        <!-- Facebook -->
+        <p>
+          <a href="https://www.facebook.com/Saul18" target="_TOP" title="Sa&#xfa;l G&#xf3;mez"><img src="https://badge.facebook.com/badge/1844615556.3214.1523246714.png" style="border: 0px;"/></a><br/>
+        </p>
+      </div>
+    </div>
 </body>
-
+  <footer>
+    <p><b>&copy; Sago 2014</b></p>
+  </footer>
 </html>
-
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
