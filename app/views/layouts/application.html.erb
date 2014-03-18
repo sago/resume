@@ -26,9 +26,6 @@
     <div class="tab-content span8" id="tab-content">
       <div class="notice alert alert-success .alert-dismissable" style="padding: 0px 90px 0px 50px">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <b>
-          <%= flash[:notice] %>
-        </b>
       </div>
       <div class="tab-pane <%= 'active' if controller_name == 'menus' %>" id="home">
         <%= html_escape(render "shared/index") %>
@@ -54,7 +51,6 @@
   <!-- Menú lateral-->
   <div class="span3 tab-content">
         <h2>Social</h2>
-    <p>
       <!-- Google Maps -->
       <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
       <meta charset="utf-8">
@@ -67,7 +63,6 @@
       </style>
       <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <div id="map-canvas" style="height: 238px; margin: 15px;"></div>
-    </p>
 
     <!-- Twitter -->
     <p>
